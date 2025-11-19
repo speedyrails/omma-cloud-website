@@ -1,0 +1,376 @@
+/* CSS Custom Properties for Theme Colors */
+:root {
+  /* Color palette inspired by nature and compound eyes */
+  --color-primary: #2c5f2d;
+  --color-secondary: #6b9440; /* Darkened for better contrast (was #97bc62) */
+  --color-accent: #ffd700;
+  --color-background: #fafaf8;
+  --color-text: #2d3436;
+  --color-text-light: #5a5a5a; /* Darkened for better contrast (was #636e72) */
+  --color-link: #2c5f2d;
+  --color-link-hover: #1e4620;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-xxl: 4rem;
+
+  /* Typography */
+  --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2rem;
+  --line-height-base: 1.6;
+  --line-height-tight: 1.2;
+
+  /* Container */
+  --container-max-width: 1200px;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Mobile-First Layout */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  text-align: center;
+}
+
+/* Branding Section */
+header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.branding h1 {
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+  line-height: var(--line-height-tight);
+}
+
+.branding .tagline {
+  font-size: var(--font-size-base);
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+/* Hero/Teaser Section */
+.hero {
+  margin-bottom: var(--spacing-xl);
+}
+
+.teaser-headline {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  line-height: var(--line-height-tight);
+}
+
+.teaser-subtext {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  margin-bottom: var(--spacing-lg);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.coming-soon {
+  font-size: var(--font-size-lg);
+  color: var(--color-secondary);
+  font-weight: 500;
+}
+
+/* Contact Section */
+.contact {
+  margin-top: var(--spacing-xl);
+}
+
+.contact p {
+  font-size: var(--font-size-base);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-sm);
+}
+
+.contact-link {
+  display: inline-block;
+  font-size: var(--font-size-lg);
+  color: var(--color-link);
+  text-decoration: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 2px solid var(--color-link);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+  background-color: var(--color-link);
+  color: var(--color-background);
+  transform: translateY(-2px);
+}
+
+.contact-link:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Tablet Breakpoint (768px and up) */
+@media (min-width: 768px) {
+  main {
+    padding: var(--spacing-lg);
+  }
+
+  .branding h1 {
+    font-size: 3rem;
+  }
+
+  .branding .tagline {
+    font-size: var(--font-size-lg);
+  }
+
+  .teaser-headline {
+    font-size: 2rem;
+  }
+
+  .teaser-subtext {
+    font-size: var(--font-size-lg);
+    max-width: 700px;
+  }
+
+  .coming-soon {
+    font-size: var(--font-size-xl);
+  }
+
+  header {
+    margin-bottom: var(--spacing-xxl);
+  }
+
+  .hero {
+    margin-bottom: var(--spacing-xxl);
+  }
+}
+
+/* Desktop Breakpoint (1024px and up) */
+@media (min-width: 1024px) {
+  main {
+    padding: var(--spacing-xl);
+  }
+
+  .branding h1 {
+    font-size: 3.5rem;
+  }
+
+  .branding .tagline {
+    font-size: var(--font-size-xl);
+  }
+
+  .teaser-headline {
+    font-size: 2.5rem;
+  }
+
+  .teaser-subtext {
+    font-size: var(--font-size-xl);
+    max-width: 800px;
+  }
+
+  .coming-soon {
+    font-size: 2rem;
+  }
+
+  .contact-link {
+    font-size: var(--font-size-xl);
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+}
+
+/* Hexagonal Background Pattern */
+.hexagon-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.hexagon-pattern {
+  width: 100%;
+  height: 100%;
+}
+
+/* Floating Hexagons */
+.floating-hexagons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hex {
+  position: absolute;
+  width: 60px;
+  height: 69.28px;
+  background-color: rgba(151, 188, 98, 0.15);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  animation: float 20s infinite ease-in-out;
+}
+
+.hex-1 {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+  animation-duration: 25s;
+}
+
+.hex-2 {
+  top: 60%;
+  left: 80%;
+  animation-delay: 5s;
+  animation-duration: 30s;
+  width: 40px;
+  height: 46.19px;
+}
+
+.hex-3 {
+  top: 30%;
+  left: 70%;
+  animation-delay: 10s;
+  animation-duration: 22s;
+  width: 50px;
+  height: 57.74px;
+}
+
+.hex-4 {
+  top: 80%;
+  left: 20%;
+  animation-delay: 15s;
+  animation-duration: 28s;
+  width: 35px;
+  height: 40.41px;
+}
+
+.hex-5 {
+  top: 50%;
+  left: 5%;
+  animation-delay: 8s;
+  animation-duration: 26s;
+  width: 45px;
+  height: 51.96px;
+}
+
+/* Keyframe Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.15;
+  }
+  25% {
+    transform: translateY(-30px) rotate(5deg);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateY(-60px) rotate(-5deg);
+    opacity: 0.15;
+  }
+  75% {
+    transform: translateY(-30px) rotate(3deg);
+    opacity: 0.2;
+  }
+}
+
+/* Subtle pulse animation for branding */
+.branding h1 {
+  animation: subtle-pulse 4s infinite ease-in-out;
+}
+
+@keyframes subtle-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+/* Ensure main content is above decorative elements */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Prefers Reduced Motion - Disable animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .hex {
+    animation: none;
+    opacity: 0.1;
+  }
+
+  .branding h1 {
+    animation: none;
+    opacity: 1;
+  }
+
+  .contact-link:hover,
+  .contact-link:focus {
+    transform: none;
+  }
+
+  .social-link:hover,
+  .social-link:focus {
+    transform: none;
+  }
+}

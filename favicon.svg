@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" fill="#2c5f2d"/>
+  <g fill="none" stroke="#97bc62" stroke-width="1.5">
+    <!-- Central hexagon -->
+    <polygon points="16,8 22,12 22,20 16,24 10,20 10,12"/>
+    <!-- Surrounding hexagons (partial) -->
+    <polygon points="16,2 22,6 22,8 16,8 10,8 10,6"/>
+    <polygon points="22,12 28,16 28,20 22,20"/>
+    <polygon points="22,20 28,24 22,28 16,24"/>
+    <polygon points="10,20 4,24 4,16 10,12"/>
+    <polygon points="10,8 4,4 10,2"/>
+  </g>
+  <!-- Center dot for emphasis -->
+  <circle cx="16" cy="16" r="2" fill="#ffd700"/>
+</svg>
